@@ -1,0 +1,24 @@
+name: deploy-curriculum-vitae
+run-name: Deploy Curriculum Vitae
+on:
+  push:
+    branches:
+      - main
+jobs:
+  deploy-to-netlify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Copy to ./dist
+      - uses: actions/checkout@v3
+        run: |
+          mkdir dist 
+          cp index.html dist/
+      - name: Deploy
+      - uses: netlify/actions/cli@master
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        with:
+          args: deploy --dir=build --prod
+          secrets: '["NETLIFY_AUTH_TOKEN", "NETLIFY_SITE_ID"]'
+          
