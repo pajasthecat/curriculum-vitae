@@ -1,5 +1,4 @@
 name: deploy-curriculum-vitae
-run-name: Deploy Curriculum Vitae
 on:
   push:
     branches:
