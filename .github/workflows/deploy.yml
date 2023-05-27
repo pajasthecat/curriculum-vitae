@@ -12,12 +12,13 @@ jobs:
         run: |
           mkdir dist 
           cp index.html dist/
+          
       - name: Deploy
-      - uses: netlify/actions/cli@master
+      - uses: nwtgck/actions-netlify@v2.0
+        with:
+           publish-dir: './dist'
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-        with:
-          args: deploy --dir=build --prod
-          secrets: '["NETLIFY_AUTH_TOKEN", "NETLIFY_SITE_ID"]'
+       
           
