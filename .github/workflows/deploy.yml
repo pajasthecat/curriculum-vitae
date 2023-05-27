@@ -12,7 +12,7 @@ jobs:
         run: cp index.html dist/
 
       - name: Deploy
-      - uses: nwtgck/actions-netlify@v2.0
+        uses: nwtgck/actions-netlify@v2.0
         with:
            publish-dir: './dist'
         env:
