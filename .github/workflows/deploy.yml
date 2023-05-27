@@ -8,9 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Copy to ./dist
-        run: |
-          mkdir dist 
-          cp index.html dist/
+        run: mkdir dist 
+        run: cp index.html dist/
 
       - name: Deploy
       - uses: nwtgck/actions-netlify@v2.0
