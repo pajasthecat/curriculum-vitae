@@ -1,186 +1,262 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Curriculum Vitae</title>
     <style>
       body {
-        font-family: "Courier New", monospace;
-        margin: 0;
-        padding: 20px;
-        background-color: #e4dfda;
-      }
-
-      a {
-        color: #48a9a6;
-        text-decoration: none;
-        text-transform: uppercase;
-      }
-
-      .center {
-        margin: auto;
-        margin-bottom: 20px;
-        width: 60%;
-        background-color: #e4dfda;
-        border-radius: 10px;
-        padding: 30px;
-        box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+        text-align: center;
+        font-family: "Tahoma", sans-serif;
       }
 
       h1 {
         font-size: 36px;
-        text-align: center;
-        margin-bottom: 20px;
-      }
-
-      h2 {
-        font-size: 24px;
         margin-bottom: 10px;
       }
 
-      .section {
-        margin-bottom: 30px;
+      h2 {
+        border-bottom: 1px solid black;
+        font-size: 24px;
+        margin-bottom: 10px;
+        margin-right: 10px;
+      }
+
+      h3 {
+        margin-top: 5px;
+      }
+
+      a {
+        text-decoration: none;
+        color: black;
+      }
+
+      img {
+        width: 20px;
+        vertical-align: middle;
+      }
+
+      ul {
+        list-style-type: none;
+      }
+
+      .header {
+        border-bottom: 1px solid black;
+        text-align: center;
+      }
+
+      .some-page-wrapper {
+        margin: 15px;
+      }
+
+      .row {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 10px;
+      }
+
+      .columnRight {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 100%;
+        flex: 3;
+        gap: 10px;
+      }
+
+      .columnLeft {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 100%;
+        flex: 1;
+        gap: 10px;
+        border-right: 1px solid black;
+      }
+
+      .item {
+        height: 100px;
+        margin-bottom: 10px;
+        text-align: left;
+      }
+
+      .itemMiddle {
+        flex-grow: 1;
+        text-align: left;
+      }
+
+      .itemBig {
+        flex-grow: 3;
+        text-align: left;
       }
 
       .sub-heading {
         font-weight: bold;
       }
 
-      .content {
-        margin-top: 5px;
-      }
-
-      .personal-info {
-        margin-bottom: 20px;
-      }
-
-      .personal-info p {
-        margin: 0;
-      }
-
-      .education-item,
-      .work-experience-item {
-        margin-bottom: 15px;
-      }
-
-      .skills-list,
-      .interests-list {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-      }
-
-      .skills-list li,
-      .interests-list li {
-        margin-bottom: 5px;
+      .gitHubLinks {
+        border-bottom: 2px solid black;
+        line-height: 1.3;
       }
     </style>
   </head>
   <body>
-    <h1>Curriculum Vitae</h1>
-
-    <div class="center">
-      <!-- Personal Information -->
-      <div class="section personal-info">
-        <h2>Personal Information</h2>
-        <p><span class="sub-heading">Name:</span> Henrik Forsberg</p>
-        <p>
-          <span class="sub-heading">Email:</span> henrik.forsberg1990@gmail.com
-        </p>
-      </div>
+    <div class="header">
+      <h1>Henrik Forsberg's CV</h1>
+      <h3>Software development</h3>
     </div>
+    <div class="some-page-wrapper">
+      <div class="row">
+        <div class="columnLeft">
+          <div class="itemMiddle">
+            <div class="section personal-info">
+              <h2>Contact</h2>
+              <div>
+                <img src="icons\email.png" alt="" />
+                <a href="mailto: henrik.forsberg1990@gmail.com"
+                  >henrik.forsberg1990@gmail.com</a
+                >
+              </div>
+              <br />
+              <div>
+                <img src="icons\linkedin.svg" />
+                <a
+                  href="https://www.linkedin.com/in/henrik-forsberg-61b628129/"
+                  ,
+                  target="_blank"
+                >
+                  https://www.linkedin.com/in/henrik-forsberg-61b628129/</a
+                >
+              </div>
+              <br />
+              <div>
+                <img src="icons\github.png" alt="" />
+                <a href="https://github.com/pajasthecat" , target="_blank">
+                  https://github.com/pajasthecat</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <h2>Education</h2>
+            <p>
+              University of Gothenburg <br />
+              Bachelor of Science in Economics <br />
+              2016
+            </p>
+          </div>
+          <div class="itemBig">
+            <h2>Skills</h2>
+            <p>
+              <span class="sub-heading">Programming languages:</span>
+              Javascript, Typescript, C#
+            </p>
 
-    <div class="center">
-      <!-- Education -->
-      <div class="section">
-        <h2>Education</h2>
-        <div class="education-item">
-          <p>
-            <span class="sub-heading">Degree:</span> Bachelor of Science in
-            Economics
-          </p>
-          <p>
-            <span class="sub-heading">University:</span> University of
-            Gothenburg
-          </p>
-          <p><span class="sub-heading">Year:</span> 2016</p>
+            <p>
+              <span class="sub-heading">Frameworks:</span>
+              .Net Core, .Net Framework, React, Node.js
+            </p>
+            <p>
+              <span class="sub-heading">Database:</span>
+              MongoDB, SQL, AWS Dynamo Db
+            </p>
+            <p>
+              <span class="sub-heading">Version Control:</span>
+              Git
+            </p>
+            <p>
+              <span class="sub-heading">Cloud Providers:</span>
+              AWS, Azure
+            </p>
+            <p>
+              <span class="sub-heading">CI/CD:</span>
+              GitHub Actions, Bitbucket pipelines, Azure Devops
+            </p>
+            <p>
+              <span class="sub-heading">IAC:</span>
+              Terraform, Serverless, Cloudformation
+            </p>
+          </div>
+          <div class="itemMiddle">
+            <h2>Git Hub (Special picks)</h2>
+            <p>
+              <a
+                href="https://github.com/pajasthecat/curriculum-vitae"
+                target="_blank"
+                class="gitHubLinks"
+                >This CV page, deployed through CI/CD</a
+              >
+            </p>
+            <p>
+              <a
+                href="https://github.com/pajasthecat/summarize-text"
+                target="_blank"
+                class="gitHubLinks"
+                >Using R to summarize text and expose it on an api endpoint
+              </a>
+            </p>
+            <p>
+              <a
+                href="https://github.com/pajasthecat/error-statistics"
+                target="_blank"
+                class="gitHubLinks"
+                >Cli created with F# to calculate weekly error statistics from
+                PagerDuty files</a
+              >
+            </p>
+
+            <p>
+              <a
+                href="https://github.com/pajasthecat/genealogy-server"
+                target="_blank"
+                class="gitHubLinks"
+                >Creating a server for genealogy with MediatR and Neo4j
+              </a>
+            </p>
+          </div>
         </div>
-      </div>
-    </div>
-
-    <div class="center">
-      <!-- Work Experience -->
-      <h2>Work Experience</h2>
-      <div class="work-experience-item">
-        <p><span class="sub-heading">Company:</span> Annevo AB</p>
-        <p><span class="sub-heading">Position:</span> Software Developer</p>
-        <p><span class="sub-heading">Duration:</span> May 2020 - Present</p>
-        <p class="content">
-          Description of responsibilities and achievements in bullet points or
-          paragraphs.
-        </p>
-      </div>
-      <div class="work-experience-item">
-        <p><span class="sub-heading">Company:</span> Collector Bank</p>
-        <p><span class="sub-heading">Position:</span> Software Developer</p>
-        <p><span class="sub-heading">Duration:</span> June 2017 - May 2020</p>
-        <p class="content">
-          Description of responsibilities and achievements in bullet points or
-          paragraphs.
-        </p>
-      </div>
-    </div>
-    <div class="center">
-      <div class="section">
-        <!-- Skills -->
-        <h2>Skills</h2>
-        <dl class="skills-list">
-          <dt>Programming languages</dt>
-          <dd>Javascript</dd>
-          <dd>Typescript</dd>
-          <dd>C#</dd>
-
-          <dt>Frameworks</dt>
-          <dd>.Net Core</dd>
-          <dd>.Net Framework</dd>
-          <dd>Node.js</dd>
-          <dd>React</dd>
-
-          <dt>Database</dt>
-          <dd>MongoDB</dd>
-          <dd>SQL</dd>
-          <dd>AWS Dyanmo Db</dd>
-
-          <dt>Version Control</dt>
-          <dd>Git</dd>
-
-          <dt>Version Control</dt>
-          <dd>AWS</dd>
-          <dd>Azure</dd>
-
-          <dt>CI/CD</dt>
-          <dd>GitHub Actions</dd>
-          <dd>Bitbucket</dd>
-          <dd>Azure Devops</dd>
-
-          <dt>IAC</dt>
-          <dd>Terraform</dd>
-          <dd>serverless</dd>
-          <dd>Cloudformation</dd>
-        </dl>
-      </div>
-    </div>
-
-    <div class="center">
-      <!-- Interests -->
-      <div class="section">
-        <h2>Git Hub</h2>
-        <ul class="skills-list">
-          <li>
-            <a href="https://github.com/pajasthecat/curriculum-vitae"
-              >This page, deployed through CI/CD</a
-            >
-          </li>
-        </ul>
+        <div class="columnRight">
+          <div class="item">
+            <h2>Professional summery</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Error,
+              quibusdam. Libero architecto animi suscipit cumque dolorem odio
+              numquam veritatis minima ea quod molestiae at, necessitatibus cum
+              esse rerum id nostrum praesentium! Harum vel natus aut
+              consequuntur qui aliquid explicabo assumenda accusamus quidem
+              ratione, quae impedit illum rerum temporibus? Fugit iste et,
+              facilis natus fuga odio sequi error aliquam impedit necessitatibus
+              beatae ratione ullam optio cum laudantium, minima soluta, eos
+              debitis.s
+            </p>
+          </div>
+          <div class="item">
+            <h2>Experience</h2>
+            <p>
+              Annevo AB - Gothenburg, Sweden <br />
+              <span class="sub-heading">Software Developer</span>
+              May 2020 - Present
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti
+              aliquid magni ea quas, accusamus molestiae, voluptas fugiat animi
+              ipsa nesciunt ex molestias voluptatem ullam. Laboriosam quas
+              perferendis tenetur ratione nulla.
+            </p>
+            <p>
+              Collector Bank - Gothenburg, Sweden <br />
+              <span class="sub-heading">Software Developer</span> June 2017 -
+              May 2020
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptates ad error nemo exercitationem itaque, nisi dicta totam
+              obcaecati. Ducimus cum quos a nisi voluptatum tenetur ut laborum
+              adipisci commodi repellat!.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </body>
